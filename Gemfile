@@ -83,3 +83,5 @@ gem "rufo", "~> 0.13.0"
 gem "devise", "~> 4.8"
 
 gem "htmlbeautifier", "~> 1.4"
+
+gem "ransack", "~> 3.2"

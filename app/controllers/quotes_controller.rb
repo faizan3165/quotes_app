@@ -3,7 +3,8 @@ class QuotesController < ApplicationController
     before_action :set_quote, only: [:show, :edit, :update, :destroy]
   
     def index
-      @quotes = current_company.quotes.ordered
+      @q = Quote.ransack(params[:q])
+      @quotes = @q.result(distinct: true)
     end
   
     def show

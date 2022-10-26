@@ -6,10 +6,12 @@
     <%= link_to "New quote",
                 new_quote_path,
                 class: "btn btn--primary",
-                data: { turbo_frame: dom_id(Quote.new) } %>
+                data: { turbo_frame: "remote_modal" } %>
   </div>
 
   <%= turbo_frame_tag Quote.new %>
+
+  <%= render "quotes/search_form" %>
 
   <%= turbo_frame_tag "quotes" do %>
     <%= render "quotes/empty_state" %>

@@ -1,0 +1,9 @@
+<%= search_form_for @q, html: { class: "quote form"} do |f| %>
+  <%= f.label :name_cont %>
+
+  <%= f.search_field :name_cont, input_html: {autofocus: true} %>
+
+  <%= f.submit class: "btn btn--primary" %>
+
+  <%= link_to "Cancel", quotes_path, class: "btn btn--light" %>
+<% end %>
